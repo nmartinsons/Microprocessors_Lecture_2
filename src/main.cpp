@@ -58,7 +58,8 @@ void loop()
   int currentSW2State = digitalRead(SW2);
   int currentSW3State = digitalRead(SW3);
 
-  // Handling SW1 button press and release
+  // TASK 2,3
+  //  Handling SW1 button press and release
   if (lastSW1State == HIGH && currentSW1State == LOW)
   {
     delay(50); // Debouncing
@@ -77,7 +78,8 @@ void loop()
     Serial.print("SW1 Held Time (ms): ");
     Serial.println(sw1HeldTime);
 
-    // Check if the press is short or long
+    // TASK4
+    //  Check if the press is short or long
     if (sw1HeldTime <= SHORT_PRESS_MAX)
     {
       Serial.println("SW1 Short Press");
@@ -88,7 +90,8 @@ void loop()
     }
   }
 
-  // Handling SW2 button press and release
+  // TASK 2,3
+  //  Handling SW2 button press and release
   if (lastSW2State == HIGH && currentSW2State == LOW)
   {
     delay(50); // Debouncing
@@ -107,7 +110,8 @@ void loop()
     Serial.print("SW2 Held Time (ms): ");
     Serial.println(sw2HeldTime);
 
-    // Check if the press is short or long
+    // TASK4
+    //  Check if the press is short or long
     if (sw2HeldTime <= SHORT_PRESS_MAX)
     {
       Serial.println("SW2 Short Press");
@@ -117,8 +121,8 @@ void loop()
       Serial.println("SW2 Long Press");
     }
   }
-
-  // Handling SW3 button press and release
+  // TASK 2,3
+  //  Handling SW3 button press and release
   if (lastSW3State == HIGH && currentSW3State == LOW)
   {
     delay(50); // Debouncing
@@ -137,7 +141,8 @@ void loop()
     Serial.print("SW3 Held Time (ms): ");
     Serial.println(sw3HeldTime);
 
-    // Check if the press is short or long
+    // TASK4
+    //  Check if the press is short or long
     if (sw3HeldTime <= SHORT_PRESS_MAX)
     {
       Serial.println("SW3 Short Press");
